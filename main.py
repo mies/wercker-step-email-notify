@@ -19,7 +19,7 @@ ssl = False
 if arglen >= 9 :
   ssl = sys.argv[8] in [ 'true', '1', 't', 'y', 'yes']
 
-msg = "Subject: " + subject + "\nFrom:" + fromaddr + "\nTo: " + toaddrs + "\n" + body
+msg = "Subject: " + subject + "\nFrom:" + fromaddr + "\nTo: " + toaddrs + "\n\n" + body
 
 if ssl == True :
   server = smtplib.SMTP_SSL(host)
